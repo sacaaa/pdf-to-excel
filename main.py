@@ -24,7 +24,7 @@ FONT_BOLD = Font(bold=True)
 ALIGNMENT_CENTER = Alignment(horizontal='center')
 FILL_YELLOW = PatternFill(start_color='FFD966', end_color='FFD966', fill_type='solid')
 
-COORDINATES_TABLE = {
+COORDINATES = {
     "Date": {
         "position": [595, 366, 187, 39],
         "column": "A"
@@ -47,7 +47,7 @@ COORDINATES_TABLE = {
     }
 }
 
-for key, value in COORDINATES_TABLE.items():
+for key, value in COORDINATES.items():
     value = value["column"] + "1"
     SHEET[value] = key
     SHEET[value].font = FONT_BOLD
@@ -182,7 +182,7 @@ def process_pdf_files(directory: str) -> None:
 
     for pdf_file in results:
         for image in pdf_file:
-            for key, value in COORDINATES_TABLE.items():
+            for key, value in COORDINATES.items():
                 process_data_field(image, key, value, current_row)
 
             current_row += 1
