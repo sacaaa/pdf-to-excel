@@ -32,10 +32,12 @@ pip install pytesseract
 pip install openpyxl
 pip install pdf2image
 ```
+Download the [Poppler](https://poppler.freedesktop.org/) and [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) libraries from here and paste them into the `assets` folder.
+
 
 ## Usage
 
-1. Place your PDF files in the `input_pdf` directory.
+1. Place your PDF files in the `input_pdf` directory and update the `COORDINATES` dictionary as your PDF.
 2. Run the script:
 
 ```bash
